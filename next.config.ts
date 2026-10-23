@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  serverExternalPackages: ["@node-rs/argon2", "@prisma/client"],
   turbopack: {
     rules: {
       "*.css": {
