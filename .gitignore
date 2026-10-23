@@ -48,3 +48,12 @@ prisma/dev.db-journal
 # docker
 *.pid
 
+.env*
+
+# ferramentas de agentes
+.agents/
+.claude/
+skills-lock.json
+
+# mantém o exemplo versionado
+!.env.example
