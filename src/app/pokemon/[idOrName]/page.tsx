@@ -180,13 +180,13 @@ export default async function DetailPage({ params }: DetailPageProps) {
             background: `radial-gradient(circle at 82% 12%, ${heroColor}30, transparent 26rem), radial-gradient(circle at 6% 92%, ${heroColor}18, transparent 24rem)`,
           }}
         />
-        <div className="relative grid gap-8 p-5 sm:p-8 lg:grid-cols-[1fr_1.08fr] lg:items-center">
+        <div className="relative grid gap-8 p-5 sm:p-8 md:grid-cols-[0.92fr_1.08fr] md:items-center">
           <div>
             <div className="flex items-center justify-center rounded-3xl border border-white/70 bg-white/55 p-4 backdrop-blur">
               <SafeImage
                 src={artwork}
                 alt={`Arte oficial de ${localizedName}`}
-                className="h-64 w-64 object-contain drop-shadow-[0_24px_28px_rgba(29,35,51,0.22)] sm:h-80 sm:w-80 lg:h-96 lg:w-96"
+                className="h-64 w-64 object-contain drop-shadow-[0_24px_28px_rgba(29,35,51,0.22)] sm:h-72 sm:w-72 lg:h-96 lg:w-96"
                 wrapperClassName="h-full w-full items-center justify-center bg-transparent"
                 loading="eager"
               />
@@ -248,7 +248,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
               </p>
             ) : null}
 
-            <dl className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4">
+            <dl className="mt-5 grid grid-cols-2 gap-2 lg:grid-cols-4">
               <InfoItem label="Altura" value={formatHeight(pokemon.height)} />
               <InfoItem label="Peso" value={formatWeight(pokemon.weight)} />
               <InfoItem label="Categoria" value={genus ?? "Não disponível"} />
@@ -312,13 +312,13 @@ export default async function DetailPage({ params }: DetailPageProps) {
 
       <nav
         aria-label="Seções do Pokémon"
-        className="no-scrollbar sticky top-[4.6rem] z-20 mt-5 flex gap-1.5 overflow-x-auto rounded-2xl border border-slate-900/[0.06] bg-white/85 p-1.5 shadow-sm backdrop-blur"
+        className="no-scrollbar sticky top-[4.6rem] z-20 mt-5 flex gap-1 overflow-x-auto rounded-2xl border border-slate-900/[0.06] bg-white/85 p-1.5 shadow-sm backdrop-blur"
       >
         {sections.map((section) => (
           <a
             key={section.id}
             href={`#${section.id}`}
-            className="shrink-0 rounded-xl px-3.5 py-2 text-xs font-semibold text-slate-600 transition-colors hover:bg-red-50 hover:text-red-700"
+            className="flex-1 basis-0 whitespace-nowrap rounded-xl px-1.5 py-2 text-center text-[10px] font-semibold text-slate-600 transition-colors hover:bg-red-50 hover:text-red-700 sm:flex-none sm:basis-auto sm:px-3.5 sm:text-xs"
           >
             {section.label}
           </a>
@@ -394,7 +394,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
 
             <div>
               <h3 className="text-sm font-bold text-slate-800">Variedades</h3>
-              <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+              <ul className="mt-3 grid grid-cols-2 gap-2">
                 {varieties.map((variety) => (
                   <li key={variety.name}>
                     <Link

@@ -20,7 +20,7 @@ export function SectionCard({
   return (
     <section
       id={id}
-      className={`scroll-mt-24 rounded-3xl border border-slate-900/[0.07] bg-white/85 p-5 shadow-[0_1px_2px_rgba(29,35,51,0.04),0_18px_36px_-28px_rgba(29,35,51,0.35)] backdrop-blur sm:p-6 ${className ?? ""}`}
+      className={`min-w-0 scroll-mt-24 rounded-3xl border border-slate-900/[0.07] bg-white/85 p-5 shadow-[0_1px_2px_rgba(29,35,51,0.04),0_18px_36px_-28px_rgba(29,35,51,0.35)] backdrop-blur sm:p-6 ${className ?? ""}`}
     >
       <div className="mb-5 flex flex-wrap items-start justify-between gap-3">
         <div>

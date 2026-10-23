@@ -34,7 +34,7 @@ function EvolutionCard({
     <Link
       href={id ? `/pokemon/${id}` : "#"}
       aria-current={isCurrent ? "page" : undefined}
-      className={`flex w-32 shrink-0 flex-col items-center gap-2 rounded-2xl border p-3 text-center transition-colors sm:w-40 ${
+      className={`flex w-36 shrink-0 flex-col items-center gap-2 rounded-2xl border p-3 text-center transition-colors lg:w-40 ${
         isCurrent
           ? "border-red-300 bg-red-50/80"
           : "border-slate-900/[0.07] bg-white/70 hover:border-red-200 hover:bg-white"
@@ -86,7 +86,7 @@ function EvolutionConditions({
   }
 
   return (
-    <span className="flex w-24 flex-col items-center gap-1 sm:w-28">
+    <span className="flex w-24 flex-col items-center gap-1 lg:w-28">
       {conditions.map((condition) => (
         <span
           key={condition}
@@ -105,7 +105,7 @@ function EvolutionConnector({
   details: readonly EvolutionDetail[];
 }) {
   return (
-    <div className="flex w-24 shrink-0 flex-col items-center gap-1.5 sm:w-28">
+    <div className="flex w-24 shrink-0 flex-col items-center gap-1.5 lg:w-28">
       <span aria-hidden="true" className="text-xl leading-none text-slate-300">
         →
       </span>
@@ -124,7 +124,7 @@ export function EvolutionTree({ chain, currentId }: EvolutionTreeProps) {
           key={path.map((link) => link.species.name).join(">")}
           className="overflow-x-auto pb-2"
         >
-          <ol className="flex w-max items-center gap-2 sm:gap-3">
+          <ol className="flex w-max flex-col items-center gap-2 sm:flex-row sm:gap-3">
             {path.map((link, index) => (
               <Fragment key={`${link.species.name}-${index}`}>
                 {index > 0 ? (
