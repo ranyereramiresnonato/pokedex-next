@@ -124,7 +124,7 @@ export function EvolutionTree({ chain, currentId }: EvolutionTreeProps) {
           key={path.map((link) => link.species.name).join(">")}
           className="overflow-x-auto pb-2"
         >
-          <ol className="flex w-max flex-col items-center gap-2 sm:flex-row sm:gap-3">
+          <ol className="flex w-max flex-col items-center gap-2 sm:flex-row sm:gap-2.5 lg:gap-3">
             {path.map((link, index) => (
               <Fragment key={`${link.species.name}-${index}`}>
                 {index > 0 ? (
